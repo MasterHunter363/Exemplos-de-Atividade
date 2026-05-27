@@ -1,24 +1,18 @@
-
 package model;
- 
- 
 
 public class TarefaModel {
-    
-    
+
     //Atributos 
-    
     private String nome;
     private boolean concluida;
-    
-    
-    //Contrutor
 
+    //Contrutor
     public TarefaModel(String nome) {
         this.nome = nome;
-        this.concluida = concluida = false;
+        this.concluida = false;
     }
-        // Getter and Setter
+    // Getter and Setter
+
     public String getNome() {
         return nome;
     }
@@ -37,13 +31,17 @@ public class TarefaModel {
 
     @Override
     public String toString() {
-        return "TarefaModel{" + "nome= " + nome + ", concluida= " + concluida + '}';
+
+        if (concluida == true) {
+
+            return nome + "concluido";
+
+        } else {
+            return nome + "Pendente";
+
+        }
     }
-    
-    
-    
-    
-    
- 
 }
+   
+
 
