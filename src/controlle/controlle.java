@@ -1,0 +1,22 @@
+
+package controlle;
+ 
+ import model.TarefaModel;
+import java.util.ArrayList;
+
+public class controlle {
+
+    // Lista de tarefas
+    private ArrayList<TarefaModel> lista = new ArrayList<>();
+
+    // Método cadastrar
+    public void adicionar(String nome) {
+        TarefaModel tarefa = new TarefaModel(nome);
+        lista.add(tarefa);
+    }
+
+    // Método listar
+    public ArrayList<TarefaModel> listar() {
+        return lista;
+    }
+}
